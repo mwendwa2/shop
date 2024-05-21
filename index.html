@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Sales Tracker</title>
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shop Sales Tracker</h1>
+        <div class="menu">
+            <button id="sales-tracker-btn" onclick="showSection('sales-tracker')">Sales Tracker</button>
+            <button id="product-management-btn" onclick="showSection('product-management')">Product Management</button>
+        </div>
+        <div id="sales-tracker">
+            <div class="form-group">
+                <label for="product">Product:</label>
+                <select id="product"></select>
+            </div>
+            <div class="form-group amount-group">
+                <div>
+                    <label for="quantity">Quantity Sold:</label>
+                    <input type="number" id="quantity" placeholder="e.g. 2">
+                </div>
+                <div>
+                    <label for="price">Price per Item (in KSH):</label>
+                    <input type="number" id="price" placeholder="e.g. 70" disabled>
+                </div>
+            </div>
+            <button onclick="addSale()">Add Sale</button>
+            <h2>Total Sales: KSH <span id="total-sales">0</span></h2>
+            <h2>Total Profit: KSH <span id="total-profit">0</span></h2>
+            <h3>Sales Log:</h3>
+            <ul id="log"></ul>
+            <div class="log-controls">
+                <button onclick="createNewLog()">New Log</button>
+                <select id="log-selector" onchange="switchLog()"></select>
+            </div>
+        </div>
+        <div id="product-management" class="sidebar">
+            <h2>Product Management</h2>
+            <div class="form-group">
+                <label for="sidebar-product">Product:</label>
+                <input type="text" id="sidebar-product" placeholder="e.g. Bread, Milk">
+            </div>
+            <div class="form-group">
+                <label for="buying-price">Buying Price per Item (in KSH):</label>
+                <input type="number" id="buying-price" placeholder="e.g. 60">
+            </div>
+            <div class="form-group">
+                <label for="selling-price">Selling Price per Item (in KSH):</label>
+                <input type="number" id="selling-price" placeholder="e.g. 70">
+            </div>
+            <div class="form-group">
+                <label for="initial-quantity">Initial Quantity:</label>
+                <input type="number" id="initial-quantity" placeholder="e.g. 10">
+            </div>
+            <button onclick="addProduct()">Add Product</button>
+            <h3>Product List:</h3>
+            <ul id="product-list"></ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+    <script>
+
+    </script>
+</body>
+</html>
+
+
