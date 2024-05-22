@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Sales Tracker</title>
+    <title>Advanced Shop Sales Tracker</title>
     <link rel="stylesheet" href="index.css">
-
-    <style>
-       
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Shop Sales Tracker</h1>
+        <h1>Advanced Shop Sales Tracker</h1>
         <div class="menu">
             <button id="sales-tracker-btn" onclick="showSection('sales-tracker')">Sales Tracker</button>
             <button id="product-management-btn" onclick="showSection('product-management')">Product Management</button>
+            <button id="analytics-dashboard-btn" onclick="showSection('analytics-dashboard')">Analytics Dashboard</button>
         </div>
         <div id="sales-tracker">
             <div class="form-group">
@@ -62,14 +59,17 @@
             </div>
             <button onclick="addProduct()">Add Product</button>
             <h3>Product List:</h3>
+            <input type="text" id="product-search" placeholder="Search products..." oninput="searchProducts()">
             <ul id="product-list"></ul>
         </div>
+        <div id="analytics-dashboard" class="sidebar">
+            <h2>Analytics Dashboard</h2>
+            <canvas id="sales-chart"></canvas>
+            <canvas id="profit-chart"></canvas>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
-
-    <script>
-
-    </script>
 </body>
 </html>
 
